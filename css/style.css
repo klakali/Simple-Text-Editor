@@ -61,7 +61,7 @@ button {
 }
 input[type=text] {
     padding: 1em;
-    min-width: 500px;
+    min-width: 100px;
 
 }
 form {
@@ -74,7 +74,7 @@ form {
     align-items: center; 
     justify-content: center;
     min-height: 200px;
-    min-width: 200px;
+    min-width: 100px;
     background-color: #585858;
     color: white;
     font-size: 2em;
