@@ -1,6 +1,7 @@
 var reverseText = document.getElementById('textReversing');
 var reverseWord = document.getElementById('wordsReversing');
 var telegramText = document.getElementById('telegram');
+var binaryText = document.getElementById('binary');
     
 // Reverse function
 function reverseTextFunction() {
@@ -32,7 +33,30 @@ if (userTextMessage == "") {
 } else { document.getElementById("toReplace").textContent = telegramTextMessage + "."; }
 };
 
+//Binary style function
+function binaryFunction() {
+var userTextMessage = document.getElementById("message").value;
+var binaryReplacement = userTextMessage.split("").map(function(char){
+    return "0" + char.charCodeAt(0).toString(2);
+});
+
+if (userTextMessage == "") {
+    alert("Please write the message");
+} else { document.getElementById("toReplace").textContent = binaryReplacement.join("");
+  }  
+       }
+
+/*else {
+     function wordToBin(userTextMessage){  
+return userTextMessage.split("").map(function(char){
+    document.getElementById("toReplace").textContent = "0" + char.charCodeAt(0).toString(2);
+  })     )
+}
+}};
+  */  
+
+
 reverseText.addEventListener('click', reverseTextFunction);
 reverseWord.addEventListener('click', reverseWordsFunction);
 telegramText.addEventListener('click', telegramFunction);
-capitalizeText.addEventListener('click', capitalizeFunction);
+binaryText.addEventListener('click', binaryFunction);
